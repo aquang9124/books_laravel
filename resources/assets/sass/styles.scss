@@ -1,0 +1,63 @@
+// Variables
+$width: 100%;
+$height: 100%;
+
+// Global Selectors
+html, body {
+	width: $width;
+	height: $height;
+	font-family: 'Lato';
+}
+
+body {
+	background: url('/img/laptop.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
+
+p {
+	margin: em(5px) 0 em(5px) 0;
+}
+
+h1 {
+	margin: 0;
+}
+// Class specific CSS
+.fa-btn {
+    margin-right: 6px;
+}
+
+.wrapper {
+	@include outer-container(70%);
+	padding-top: em(20px);
+	.grid-row {
+		@include row();
+	}
+}
+
+.panel-overrides {
+	background: rgba(255,255,255, 0.5);
+	border-color: black;
+	height: 80% !important;
+
+	>.panel-heading {
+		background-color: black;
+		border-color: black;
+		color: white;
+	}
+}
+
+.navbar-nav>li>a {
+	color: white !important;
+}
+
+.book-title {
+	display: block;
+	font-size: em(23px);
+}
+// ID specific CSS
+#books-wrapper {
+	height: em(300px);
+	background: rgba(200,200,200, 0.8);
+	border: 2px solid black;
+	overflow-y: auto;
+}
